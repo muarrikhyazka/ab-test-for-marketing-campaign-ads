@@ -10,12 +10,12 @@ import base64
 
 
 
-
+title = 'AB Test for Marketing Campaign Ads'
 
 
 # Layout
 img = Image.open('assets/icon_pink-01.png')
-st.set_page_config(page_title='Muarrikh Yazka', page_icon=img, layout='wide')
+st.set_page_config(page_title=title, page_icon=img, layout='wide')
 
 
 
@@ -110,7 +110,7 @@ with st.sidebar:
 
 
 
-st.title('AB Test for Marketing Campaign Ads')
+st.title(title)
 
 
 st.subheader('Business Understanding')
