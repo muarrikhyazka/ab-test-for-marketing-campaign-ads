@@ -127,6 +127,14 @@ st.write(
     """
 )
 
+
+
+st.write(
+    """
+    In this case, we take case marketing campaign ads whether should be aired longer with better performance.
+    """
+)
+
 st.write(
     """
     Problem Statement on Kaggle : 
@@ -137,12 +145,6 @@ st.write(
 )
 
 
-
-st.write(
-    """
-    In this case, we take case marketing campaign ads whether should be aired longer with better performance and spend.
-    """
-)
 
 st.write(
     """
@@ -176,10 +178,10 @@ st.dataframe(df_test.sample(5))
 st.write(
     """
     In here, I put the description from Kaggle of each columns which I used. I only used 4 metrics. I put the reason why I choose them on Analysis section.
-    \n# of Impressions : It is a variable for the user to see an ad.
-    \n# of Website Clicks : It is the variable related to the user clicking the website link in the advertisement.
-    \n# of Add to Cart : It is the variable related to the user adding the product to the cart.
-    \n# of Purchase : It is the variable related to the user's purchase of the product.
+    \nImpressions : It is a variable for the user to see an ad.
+    \nWebsite Clicks : It is the variable related to the user clicking the website link in the advertisement.
+    \nAdd to Cart : It is the variable related to the user adding the product to the cart.
+    \nPurchase : It is the variable related to the user's purchase of the product.
     """
 )
 
@@ -220,11 +222,11 @@ st.write(
 st.subheader('Analysis')
 st.write(
     """
-    Here, I only used 4 metrics, they are # of Impressions, # of Website Clicks, # of Add to Cart, # of Purchase. The question is Why? Because these 4 metrics represent each stage of marketing funnel :
-    \n# of Impressions -> Awareness
-    \n# of Website Clicks -> Interest
-    \n# of Add to Cart -> Intent
-    \n# of Purchase -> Purchase
+    Here, I only used 4 metrics, they are Impressions, Website Clicks, Add to Cart, Purchase. The question is Why? Because these 4 metrics represent each stage of marketing funnel :
+    \nImpressions -> Awareness
+    \nWebsite Clicks -> Interest
+    \nAdd to Cart -> Intent
+    \nPurchase -> Purchase
     """
 )
 
@@ -248,16 +250,16 @@ st.code(
     """
     Control Group 
 
-    # of Impressions
+    Impressions
     Test Stat = 0.9426, p-value = 0.1172 
 
-    # of Website Clicks
+    Website Clicks
     Test Stat = 0.9586, p-value = 0.3043 
 
-    # of Add to Cart
+    Add to Cart
     Test Stat = 0.9554, p-value = 0.2525 
 
-    # of Purchase
+    Purchase
     Test Stat = 0.9381, p-value = 0.0896 
     """
 )
@@ -272,23 +274,23 @@ st.code(
     """
     Test Group 
 
-    # of Impressions
+    Impressions
     Test Stat = 0.9485, p-value = 0.1537 
 
-    # of Website Clicks
+    Website Clicks
     Test Stat = 0.9062, p-value = 0.0120 
 
-    # of Add to Cart
+    Add to Cart
     Test Stat = 0.9236, p-value = 0.0332 
 
-    # of Purchase
+    Purchase
     Test Stat = 0.9182, p-value = 0.0241 
     """
 )
 
 st.write(
     """
-    # of Impressions is normal, but the rest is not
+    Impressions is normal, but the rest is not
     """
 )
 
@@ -300,19 +302,19 @@ st.write(
 
 st.code(
     """
-    # of Impressions
+    Impressions
     ttest statistics: 6.8867144172541295
     p_value: 0.011125294220972793
 
-    # of Website Clicks
+    Website Clicks
     ttest statistics: 0.041895271352688654
     p_value: 0.8385486753201417
 
-    # of Add to Cart
+    Add to Cart
     ttest statistics: 1.4290971599392581
     p_value: 0.2368617582504474
 
-    # of Purchase
+    Purchase
     ttest statistics: 1.230260648051359
     p_value: 0.2720142278811527
     """
@@ -335,19 +337,19 @@ st.write(
 
 st.code(
     """
-    # of Impressions
+    Impressions
     ttest statistics: 6.8867144172541295
     p_value: 0.011125294220972793
 
-    # of Website Clicks
+    Website Clicks
     ttest statistics: 0.041895271352688654
     p_value: 0.8385486753201417
 
-    # of Add to Cart
+    Add to Cart
     ttest statistics: 1.4290971599392581
     p_value: 0.2368617582504474
 
-    # of Purchase
+    Purchase
     ttest statistics: 1.230260648051359
     p_value: 0.2720142278811527
     """
@@ -355,17 +357,17 @@ st.code(
 
 st.write(
     """
-    All of the p values except those for the # of Impressions are higher than 0.05, 
+    All of the p values except those for the Impressions are higher than 0.05, 
     it means we cannot reject the H0 hypothesis. 
-    Therefore, we can say that there is no statistically significant difference between the variance distributions of the # of Website Clicks,# of Add to Cart and # of Purchase values of the 2 groups.
-    There is statistically significant difference between the variance distributions of the # of Impressions values of the 2 groups.
+    Therefore, we can say that there is no statistically significant difference between the variance distributions of the Website Clicks,Add to Cart and Purchase values of the 2 groups.
+    There is statistically significant difference between the variance distributions of the Impressions values of the 2 groups.
     """
 )
 
 st.write(
     """
-    Metrics which fulfill homogenity assumption check will goes to Parametric Comparison (Independent Two-Sample T-Test). They are # of Website Clicks,# of Add to Cart and # of Purchase.
-    The rest which is # of Impressions will goes to Nonparametric Comparison (Mann-Whitney U Test).
+    Metrics which fulfill homogenity assumption check will goes to Parametric Comparison (Independent Two-Sample T-Test). They are Website Clicks,Add to Cart and Purchase.
+    The rest which is Impressions will goes to Nonparametric Comparison (Mann-Whitney U Test).
     """
 )
 
@@ -386,15 +388,15 @@ st.write(
 
 st.code(
     """
-    # of Website Clicks
+    Website Clicks
     ttest statistics: -1.576909404840952
     p_value: 0.12035072366063822
 
-    # of Add to Cart
+    Add to Cart
     ttest statistics: 4.24906420944249
     p_value: 8.032960071149041e-05
 
-    # of Purchase
+    Purchase
     ttest statistics: 0.03014479856562245
     p_value: 0.9760568756579724
     """
@@ -402,8 +404,8 @@ st.code(
 
 st.write(
     """
-    # of Add to Cart -> the two population means are not equal
-    \n# of Website Clicks, # of Purchase -> the two population means are equal
+    Add to Cart -> the two population means are not equal
+    \nWebsite Clicks, Purchase -> the two population means are equal
     """
 )
 
@@ -424,7 +426,7 @@ st.write(
 
 st.code(
     """
-    # of Impressions
+    Impressions
     ttest statistics: 697.0
     p_value: 7.344126278759323e-05
     """
@@ -432,7 +434,7 @@ st.code(
 
 st.write(
     """
-    # of Impressions -> the two population means are not equal
+    Impressions -> the two population means are not equal
     """
 )
 
@@ -444,10 +446,10 @@ st.subheader(
 
 st.write(
     """
-    # of Impressions : Average bidding (Test Group) has higher average.
-    \n# of Website Clicks : Maximum bidding (Control Group) and Average bidding (Test Group) has the same average. 
-    \n# of Add to Cart : Average bidding (Test Group) has higher average.
-    \n# of Purchase : Maximum bidding (Control Group) and Average bidding (Test Group) has the same average.
+    Impressions : Average bidding (Test Group) has higher average.
+    \nWebsite Clicks : Maximum bidding (Control Group) and Average bidding (Test Group) has the same average. 
+    \nAdd to Cart : Average bidding (Test Group) has higher average.
+    \nPurchase : Maximum bidding (Control Group) and Average bidding (Test Group) has the same average.
     \n
     \n
     \nIf your marketing campaign ads is using Awareness (Impressions) or Intent (Add to Cart) as objective or KPI, so you should use Average bidding.
